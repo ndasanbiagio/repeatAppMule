@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<mule xmlns="http://www.mulesoft.org/schema/mule/core" xmlns:doc="http://www.mulesoft.org/schema/mule/documentation"
+	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	xsi:schemaLocation="http://www.mulesoft.org/schema/mule/core http://www.mulesoft.org/schema/mule/core/current/mule.xsd">
+	<flow name="SchedularFlow" doc:id="4fd56dbb-c72f-4cc3-bbff-c9bd8d95f701" >
+		<scheduler doc:name="FLow Scheduler" doc:id="e73b825e-f839-4f13-b5f8-6b4af3cf9b5c" >
+			<scheduling-strategy >
+				<fixed-frequency frequency="10" timeUnit="SECONDS"/>
+			</scheduling-strategy>
+		</scheduler>
+		<logger level="INFO" doc:name="Log Message" doc:id="6205a23d-e20c-4e7c-b4ce-ce11ae464a29" message="************This is the mule app************"/>
+		<logger level="INFO" doc:name="Second Logger" doc:id="b1a54b83-614d-463f-ab21-07fb15985270" message="*************This is seconda message*************"/>
+		<logger level="INFO" doc:name="Third Logger" doc:id="12159f81-ce55-4e2e-a58b-b7c6a1f0fa47" message="*************Mule app is running fine*************"/>
+	</flow>
+</mule>
